@@ -19,10 +19,10 @@ const Nav = ({ isHome }: NavProps) => {
   return (
     <nav id={isHome ? "nav-fixed" : "nav"}>
       <a className="nav-link" href="#what-we-do">
-        Our Expertise
+        Expertise
       </a>
       <a className="nav-link" href="#about">
-        About us
+        About
       </a>
       <a className="nav-link" href="#home">
         <img
