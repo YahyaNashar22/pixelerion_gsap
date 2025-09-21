@@ -6,13 +6,35 @@ import Projects from "./Projects";
 import Testimonials from "./Testimonials";
 import WhatWeDo from "./WhatWeDo";
 
-import useHorizontalScroll from "../hooks/useHorizontalScroll";
+import type { CSSProperties } from "react";
+import getThemeData from "../theme";
 
-const Wrapper = () => {
-  const scrollRef = useHorizontalScroll();
+const Wrapper = ({
+  isLightTheme,
+  theme,
+  setTheme,
+}: {
+  isLightTheme: boolean;
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) => {
+  // TODO: turn this on when you want horizontal scroll
+  // const scrollRef = useHorizontalScroll();
+
+  const { cursorStyles } = getThemeData({ isLightTheme });
+
   return (
-    <main id="wrapper" ref={scrollRef}>
-      <Landing />
+    <main
+      id="wrapper"
+      // ref={scrollRef}
+      style={
+        {
+          "--cursor-normal": cursorStyles.normal,
+          "--cursor-hover": cursorStyles.hover,
+        } as CSSProperties
+      }
+    >
+      <Landing isLightTheme={isLightTheme} theme={theme} setTheme={setTheme} />
       <Home />
       <WhatWeDo />
       <About />

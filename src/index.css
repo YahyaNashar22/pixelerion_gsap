@@ -5,6 +5,7 @@
   --red: #ff3131;
   --blue: #00a8e8;
   --green: #7de247;
+  --grid: #909090;
 }
 
 * {
@@ -12,4 +13,59 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  cursor: var(--cursor-normal);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  width: 100vw;
+}
+
+.screen {
+  height: 100dvh;
+  width: 100vw;
+  min-width: 100vw;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+#landing {
+}
+
+#home {
+  background-color: var(--yellow);
+}
+
+#what-we-do {
+  background-color: var(--yellow);
+}
+
+#about {
+  background-color: white;
+  background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+#projects {
+}
+
+#testimonials {
+}
+
+#contact {
 }
