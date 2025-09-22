@@ -1,8 +1,9 @@
-
 const Projects = () => {
   return (
-    <section id="projects" className="screen"> Projects</section>
-  )
-}
+    <section id="projects" className="screen">
+      Projects
+    </section>
+  );
+};
 
-export default Projects
+export default Projects;

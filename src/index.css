@@ -290,6 +290,59 @@ html {
 /* Testimonials Block */
 
 #testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+.testimonial-container {
+  background-color: var(--black);
+  border-radius: 32px;
+  height: 480px;
+  width: 720px;
+  padding: 64px;
+
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.quote {
+  display: block;
+  font-size: 6rem;
+  line-height: 0.4;
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.name-role {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.role {
+  font-size: 1.8rem;
+  opacity: 0.7;
 }
 
 /* Contact Block */
@@ -373,3 +426,6 @@ html {
     font-size: 1.8rem;
   }
 }
+
+
+
