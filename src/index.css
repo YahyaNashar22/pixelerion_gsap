@@ -294,13 +294,19 @@ html {
   align-items: center;
   justify-content: center;
   gap: 64px;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.testimonial-wrapper {
+  height: 480px;
+  width: 720px;
+  max-width: 720px;
 }
 
 .testimonial-container {
   background-color: var(--black);
   border-radius: 32px;
-  height: 480px;
-  width: 720px;
   padding: 64px;
 
   color: var(--white);
@@ -308,6 +314,7 @@ html {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 32px;
 }
 
 .testimonial-text {
@@ -326,6 +333,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .name-role {
@@ -343,6 +351,22 @@ html {
 .role {
   font-size: 1.8rem;
   opacity: 0.7;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-mobile-btn-container {
+  display: flex;
+  gap: 32px;
+  height: 150px;
 }
 
 /* Contact Block */
@@ -425,7 +449,51 @@ html {
   .about-ids {
     font-size: 1.8rem;
   }
+
+  #testimonials {
+    gap: 32px;
+  }
+
+  .testimonial-container {
+    padding: 32px;
+    gap: 24px;
+  }
+
+  .testimonial-text {
+    font-size: 2rem;
+  }
+
+  .quote {
+    font-size: 4rem;
+  }
+
+  .name {
+    font-size: 1.6rem;
+  }
+
+  .role {
+    font-size: 1.4rem;
+  }
 }
 
+@media (max-width: 480px) {
+  .testimonial-container {
+    padding: 24px;
+  }
 
+  .testimonial-text {
+    font-size: 1.6rem;
+  }
 
+  .quote {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .role {
+    font-size: 1.2rem;
+  }
+}
